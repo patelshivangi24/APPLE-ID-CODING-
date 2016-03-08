@@ -1,0 +1,47 @@
+body.sign-up {
+    background-image:url("images/signuppage.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+body.sign-in{
+	background-image:url("images/signinpage.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.error{
+	color:red;
+}
+
+.signup-container{
+	margin-top:50px;
+	margin-bottom:100px;
+}
+
+.signin-container{
+	margin-top:150px;
+	margin-bottom:200px;
+}
+label{
+	color:#800000;
+}
+
+#signup-button{
+	margin-left:200px;
+    color: #101010;
+}
+
+#signin-button{
+	margin-left:250px;
+	color: #101010;
+}
+
+footer{
+	text-align:center;
+	margin: 4px;
+    font-size: 1.2em;
+    color:#0099ff;
+}

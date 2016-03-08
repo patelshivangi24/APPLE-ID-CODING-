@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html data-ng-app="AppleIDSignUpValidationApp">
+
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign Up for an Apple ID</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body class="sign-up">
+  <header>
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <span></span>Welcome to APPLE</a>
+                </div>
+                <div class="navbar-collapse collapse" style="height: 1px;">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="signin.html">Sign In</a>
+                        </li>
+                        <li><a href="signup.html">Create an Apple ID</a>
+                        </li>
+                        <li><a href="faq.html">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+ 
+ <section class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <section class="signup-container">
+        <form name="signupForm" class="sign-up" novalidate>
+          <div class="form-group">
+          <label>Username</label>
+          <input type="email" name="username" class="form-control" placeholder="Enter your username" data-ng-model="userName" required maxlength="56">
+          <div data-ng-messages="signupForm.username.$error" class="error"  data-ng-if="signupForm.username.$dirty">
+          <div data-ng-message="required">Username is required</div>
+          <div data-ng-message="email">This username is invalid</div>
+          </div>
+          </div> 
+     
+          <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="password" class="form-control" placeholder="Select your password" data-ng-model="password" required data-minlength="6">
+          <div data-ng-messages="signupForm.password.$error" class="error"  data-ng-if="signupForm.password.$dirty">
+          <div data-ng-message="required">Password is required</div>
+          <div data-ng-message="minlength">Password should atleast 6 characters</div>
+          </div>
+          </div> 
+     
+         <div class="form-group">
+         <label>Confirm Password</label>
+         <input type="password" name="confirmpassword" class="form-control" placeholder="Retype your password" data-ng-model="confirmPassword" required data-minlength="6">
+         <div data-ng-messages="signupForm.confirmpassword.$error" class="error"  data-ng-if="signupForm.confirmpassword.$dirty">
+         <div data-ng-message="required">Both the passwords should match</div>
+         </div>
+         </div> 
+      
+         <div class="form-group">
+         <label>First Name</label>
+         <input type="text" name="firstname" class="form-control" placeholder="Enter your first name" data-ng-model="firstName" required maxlength="50">
+         <div data-ng-messages="signupForm.firstname.$error" class="error"  data-ng-if="signupForm.firstname.$dirty">
+         <div data-ng-message="required">Firstname is required</div>
+         <div data-ng-message="maxlength">Firstname must not have more then 50 characters</div>
+         </div>
+         </div> 
+     
+         <div class="form-group">
+         <label>Last Name</label>
+         <input type="text" name="lastname" class="form-control" placeholder="Enter your last name" data-ng-model="lastName" required maxlength="50">
+         <div data-ng-messages="signupForm.lastname.$error" class="error"  data-ng-if="signupForm.lastname.$dirty">
+         <div data-ng-message="required">Lastname is required</div>
+         <div data-ng-message="maxlength">Lastname must not have more then 50 characters</div>
+         </div>
+         </div> 
+     
+         <div class="form-group">
+         <label>Date of Birth</label>
+         <input type="date" name="dateofbirth" class="form-control" placeholder="Enter your date of birth" data-ng-model="dateofBirth" required data-minlength="14">
+         <div data-ng-messages="signupForm.dateofbirth.$error" class="error"  data-ng-if="signupForm.dateofbirth.$dirty">
+         <div data-ng-message="required">Date of birth is required</div>
+         <div data-ng-message="minlength">Your must be atleast 14 years older to sign up</div>
+         </div>
+         </div>
+          
+         <button type="submit"  id ="signup-button" class="btn btn-success">Sign Up</button>
+      </form>  
+     </section>	
+  </div>
+ </div>
+</section>
+   
+
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//code.angularjs.org/1.4.0/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+<footer>Copyright &copy; APPLE INC.</footer>
+</body>
+</html>
